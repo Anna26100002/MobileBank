@@ -1,0 +1,31 @@
+#:import RGBA kivy.utils.rgba
+
+ScreenManagement:
+    MainScreen:
+    AnotherScreen:
+    Windows3:
+
+<MainScreen>:
+    name: 'MainScreen'
+
+
+    Button:
+        on_release: app.root.current = 'AnotherScreen'
+        text: 'Another Screen'
+        font_size: 50
+
+<AnotherScreen>:
+    name: 'AnotherScreen'
+
+    Button:
+        on_release: app.root.current = 'MainScreen'
+        text: 'back to the home screen'
+        font_size: 50
+
+<Windows3>:
+    name: 'Windows3'
+
+    Button:
+        on_release: app.root.current = 'MainScreen'
+        text: 'back to the home screen'
+        font_size: 50
